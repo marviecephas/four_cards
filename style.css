@@ -29,24 +29,18 @@ body{
     color:hsl(229, 6%, 66%);
 }
 .parent_container_two{
-    /* margin:50px 10px; */
     display:flex;
     flex-direction:column;
     gap: 2em;
-    /* justify-content:space-around; */
-    /* height:950px; */
     padding: 3em 0;
 }
 .sub_parent_container{
-    /* height:50%; */
     display:flex;
     flex-direction:column;
     gap: 2em;
-    /* justify-content:space-around; */
 }
 .child_container{
     /* You should try to avoid heights at all cost with child containers, if it must be used, let it not be definite. */
-    /* height:160px; */
     padding: 2.2em;
     position:relative;
     border-radius:10px;
@@ -65,7 +59,6 @@ body{
     color:hsl(229, 6%, 66%);
 }
 svg{
-    /* position:absolute; */
     display: block;
     margin: 2em 0 0 auto;
 }
