@@ -111,7 +111,24 @@ svg{
     }
 }
 
+@media (min-width: 1090px) and (max-width: 1218px) {
+    .parent_container_two{
+        gap: 1.5em;
+        padding: 3em;
+    }
+    .sub_parent_container{
+        gap: 1.5em;
+    }
+    .child_container{
+        padding: 1.5em;
+    }
+}
 
+@media (min-width: 1219px) and (max-width: 1313px) {
+    .parent_container_two{
+        padding: 3em;
+    }
+}
 
 @media (min-width: 400px) and (max-width: 864px) {
     .parent_container_two{
