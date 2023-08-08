@@ -32,6 +32,7 @@ body{
     /* margin:50px 10px; */
     display:flex;
     flex-direction:column;
+    gap: 2em;
     /* justify-content:space-around; */
     /* height:950px; */
     width: 100%;
@@ -40,6 +41,7 @@ body{
     /* height:50%; */
     display:flex;
     flex-direction:column;
+    gap: 2em;
     /* justify-content:space-around; */
 }
 .child_container{
@@ -80,7 +82,8 @@ svg{
     border-top:4px solid hsl(212, 86%, 64%);
 }
 
-@media (min-width: 600px) {
+/* Responsiveness of different breakpoints starts */
+@media (min-width: 865px) {
     .parent_container_two{
         flex-direction: row;
         align-items: center;
@@ -92,5 +95,17 @@ svg{
     }
     .sub_parent_container{
         gap: 2em;
+    }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 864px) {
+    .parent_container_two{
+        gap: 1.5em;
+        padding: 2em 5em;
+    }
+    .sub_parent_container{
+        gap: 1.5em;
     }
 }
