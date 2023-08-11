@@ -1,9 +1,10 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 body{
-    padding:80px 20px 50px 20px;
+    padding:2em 1.5em 2.5em 1.5em;
     font-family: 'Poppins', sans-serif;
 }
 .parent_container_one > *{
@@ -27,21 +28,19 @@ body{
     color:hsl(229, 6%, 66%);
 }
 .parent_container_two{
-    margin:50px 10px;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
-    height:950px;
+    gap: 2em;
+    padding: 3em 0;
 }
 .sub_parent_container{
-    height:50%;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    gap: 2em;
 }
 .child_container{
-    height:160px;
-    padding:20px;
+    /* You should try to avoid heights at all cost with child containers, if it must be used, let it not be definite. */
+    padding: 2.2em;
     position:relative;
     border-radius:10px;
     box-shadow:2px 2px 8px 8px hsl(0,0%, 95%);
@@ -59,9 +58,8 @@ body{
     color:hsl(229, 6%, 66%);
 }
 svg{
-    position:absolute;
-    bottom:20px;
-    right:20px;
+    display: block;
+    margin: 2em 0 0 auto;
 }
 .second{
     border-top:4px solid hsl(0, 78%, 62%);
@@ -74,4 +72,62 @@ svg{
 }
 .fourth{
     border-top:4px solid hsl(212, 86%, 64%);
+}
+
+/* Responsiveness of different breakpoints starts */
+@media (min-width: 865px) {
+    .parent_container_two{
+        flex-direction: row;
+        align-items: center;
+        gap: 2em;
+        padding: 3em 8em;
+    }
+    .parent_container_two > *{
+        width: 33.33%;
+    }
+    .sub_parent_container{
+        gap: 2em;
+    }
+}
+
+@media (min-width: 865px) and (max-width: 1089px) {
+    .parent_container_two{
+        gap: 1em;
+        padding: 3em .5em;
+    }
+    .sub_parent_container{
+        gap: 1em;
+    }
+    .child_container{
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1090px) and (max-width: 1218px) {
+    .parent_container_two{
+        gap: 1.5em;
+        padding: 3em;
+    }
+    .sub_parent_container{
+        gap: 1.5em;
+    }
+    .child_container{
+        padding: 1.5em;
+    }
+}
+
+@media (min-width: 1219px) and (max-width: 1313px) {
+    .parent_container_two{
+        padding: 3em;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 864px) {
+    .parent_container_two{
+        gap: 1.5em;
+        padding: 2em 5em;
+    }
+    .sub_parent_container{
+        gap: 1.5em;
+    }
 }
